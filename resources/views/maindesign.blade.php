@@ -151,6 +151,7 @@
 <section class="shop_section layout_padding">
     @yield('index')
     @yield('product_details')
+    @yield('all_products')
 </section>  
   <!-- end shop section -->
 

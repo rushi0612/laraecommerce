@@ -82,15 +82,15 @@
                 Login
               </span>
             </a>
-            <a href="{{route('register')}}">
+            {{-- <a href="{{route('register')}}">
               <i class="fa fa-user" aria-hidden="true"></i>
               <span>
                 SignUp
               </span>
-            </a>
+            </a> --}}
             @endif
-            <a href="">
-              <i class="fa fa-shopping-bag" aria-hidden="true">{{$count}}</i>
+            <a href="{{route('cartproducts')}}">
+              <i class="fa fa-shopping-bag" aria-hidden="true">{{$count}}</i> 
             </a>
             <form class="form-inline ">
               <button class="btn nav_search-btn" type="submit">
@@ -152,6 +152,7 @@
     @yield('index')
     @yield('product_details')
     @yield('all_products')
+    @yield('viewcart_products')
 </section>  
   <!-- end shop section -->
 

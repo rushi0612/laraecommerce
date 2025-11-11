@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Product;
+use App\Models\ProductCart;
 class UserController extends Controller
 {
     public function index(){
@@ -26,5 +27,14 @@ class UserController extends Controller
     public function allProducts(){
         $products= Product::all();
         return view('allproducts',compact("products"));
+    }
+    public function addToCart( $id){
+        $product= Product::findOrFail($id);
+        $product_cart=new ProductCart();
+        $product_cart->user_id=Auth::id();
+        $product_cart->product_id=$product->id;
+
+        $product_cart->save();
+        return redirect()->back()->with('cart_message', 'added to cart successfully!');
     }
 }

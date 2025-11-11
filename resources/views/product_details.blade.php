@@ -2,7 +2,11 @@
 <base href="/public">
 @section('product_details')
 
-        
+        @if(session('cart_message'))
+        <div style="margin:1rem; background-color:#d1fae5; border:1px solid #4ade80; color:#047857; padding:1rem; border-radius:0.25rem; position:relative;">
+            {{ session('cart_message') }}
+        </div>
+    @endif
     {{-- Product Details Section --}}
     <div class="container py-5">
         <div style="max-width: 1000px; marging:0 auto; padding:20px;"> 
@@ -34,7 +38,7 @@
                 @endif
 
                 {{-- Add to Cart Form (optional) --}}
-                <form action="" method="POST">
+                <form action="{{route('add_to_cart', $product->id)}}" method="get">
                     @csrf
                     <div class="row align-items-center g-3">
                         <div class="col-auto">

@@ -13,6 +13,7 @@ Route::get('/dashboard',[UserController::class,'index'] )->middleware(['auth', '
 Route::get('/allproducts', [UserController::class, 'allProducts'])->name('viewallproducts');
 Route::get('/addtocart/{id}',[UserController::class,'addToCart'] )->middleware(['auth', 'verified'])->name('add_to_cart');
 Route::get('/cartproducts',[UserController::class,'cartProducts'] )->middleware(['auth', 'verified'])->name('cartproducts');
+Route::get('/removecartproduct/{id}',[UserController::class,'removeCartProduct'] )->middleware(['auth', 'verified'])->name('removecartproduct');
 
 
 

@@ -24,7 +24,7 @@
               </form>
             </div>
 
-<table style="width:50%; boarder-collapse: collapse; font-family: Arial, Helvetica, sans-serif">
+<table style="width:100%; boarder-collapse: collapse; font-family: Arial, Helvetica, sans-serif">
     <thead>
         <tr style="background-color: #f2f2f2;">
             <th style="padding: 12px; text-align:left; border-bottom: 1px solid #dd;">Product Title</th>

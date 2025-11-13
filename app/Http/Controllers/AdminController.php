@@ -137,7 +137,7 @@ class AdminController extends Controller
         $order=Order::findOrFail($id);
         $order->status=$request->status;
         $order->save();
-        return redirect()->back();
+        return redirect()->back()->with('status_message', 'Order status updated successfully!');
     }
 
 }

@@ -1,6 +1,11 @@
 @extends('admin.maindesign')
 
 @section('view_orders')
+        @if(session('status_message'))
+            <div style="margin:1rem; background-color:#d1fae5; border:1px solid #4ade80; color:#047857; padding:1rem; border-radius:0.25rem; position:relative;">
+                {{ session('status_message') }}
+            </div>
+        @endif
             
 <table style="width:100%; boarder-collapse: collapse; font-family: Arial, Helvetica, sans-serif">
     <thead>

@@ -6,7 +6,7 @@
                 {{session('remove_cart_message')}}
             </div>
         @endif
-<div style="max-width: 1000px; margin:0 auto; padding:20px;">         
+<div style="max-width: 1000px; margin:0 auto; padding:20px;">     
     <table style="width:100%; border-collapse: collapse; font-family: Arial, Helvetica, sans-serif; margin: 0 auto;">
         <div class="container py-5">
             <button><a href="{{route('index')}}"> Back to Home</a></button>
@@ -44,5 +44,11 @@
             </tr>
         </tbody>
     </table>
+    <form action="{{route('conform_order')}}" method="post" style="margin-top:10px">
+        @csrf
+        <input type="text" name="receiver_address" id="" placeholder="Enter Your Address" required> <br><br><br>
+        <input type="text" name="receiver_phone" id="" placeholder="Enter Your Phone Number" required><br><br><br>
+        <input class="btn btn-primary" type="submit" value="Confirm Order" value="submit">
+    </form>
 </div>
 @endsection

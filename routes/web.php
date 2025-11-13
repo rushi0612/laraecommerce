@@ -45,7 +45,7 @@ Route::middleware('admin')->group(function () {
     Route::get('/admin_home', [AdminController::class, 'Home'])->name('admin.home');
 
     Route::post('/search', [AdminController::class, 'searchProduct'])->name('admin.searchproduct');
-
+    Route::get('/vieworder', [AdminController::class, 'viewOrder'])->name('admin.vieworder');  //
 
 });
 

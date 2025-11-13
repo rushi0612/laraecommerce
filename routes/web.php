@@ -33,7 +33,7 @@ Route::middleware('admin')->group(function () {
     Route::get('/delete_category/{id}', [AdminController::class, 'deleteCategory'])->name('admin.categorydelete');
     Route::get('/update_category/{id}', [AdminController::class, 'updateCategory'])->name('admin.categoryupdate');
     Route::post('/update_category/{id}', [AdminController::class, 'postUpdateCategory'])->name('admin.postupdatecategory');
-
+    
     Route::get('/add_product', [AdminController::class, 'addProduct'])->name('admin.addproduct');
     Route::post('/add_product', [AdminController::class, 'postAddProduct'])->name('admin.postaddproduct');
 
@@ -45,7 +45,9 @@ Route::middleware('admin')->group(function () {
     Route::get('/admin_home', [AdminController::class, 'Home'])->name('admin.home');
 
     Route::post('/search', [AdminController::class, 'searchProduct'])->name('admin.searchproduct');
-    Route::get('/vieworder', [AdminController::class, 'viewOrder'])->name('admin.vieworder');  //
+    Route::get('/vieworder', [AdminController::class, 'viewOrder'])->name('admin.vieworder'); 
+    Route::post('/change_status/{id}', [AdminController::class, 'changeStatus'])->name('admin.change_status');
+
 
 });
 

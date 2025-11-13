@@ -133,4 +133,11 @@ class AdminController extends Controller
         $orders=Order::all();
         return view('admin.vieworder',compact('orders'));
     }
+    public function changeStatus(Request $request, $id){
+        $order=Order::findOrFail($id);
+        $order->status=$request->status;
+        $order->save();
+        return redirect()->back();
+    }
+
 }

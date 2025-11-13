@@ -95,9 +95,24 @@ Follow these instructions to get a copy of the project up and running on your lo
     *   In another terminal, start the Laravel server:
         ```sh
         php artisan serve
-        ```
 
----
+           ```
+10.  **Folder Structure:**
+      * app/
+        ├── Http/
+        │   └── Controllers/
+        │       └── AdminController.php
+        ├── Models/
+        │   ├── Product.php
+        │   ├── Category.php
+        │   └── Order.php
+        resources/
+        └── views/
+            └── admin/
+                ├── maindesign.blade.php
+                ├── viewproduct.blade.php
+                ├── vieworder.blade.php
+                └── …
 
 ## 📖 Usage
 

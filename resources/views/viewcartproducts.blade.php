@@ -1,6 +1,6 @@
 @extends('maindesign')
 @section('viewcart_products')
-
+    
      @if(session('remove_cart_message'))
             <div style="margin:1rem; padding:1rem; border-radius:0.25rem; position:relative; color:black; background-color:rgb(255, 132, 132);">
                 {{session('remove_cart_message')}}
@@ -44,6 +44,11 @@
             </tr>
         </tbody>
     </table>
+        @if(session('cunfirm_order'))
+            <div style="margin:1rem; background-color:#dbeafe; border:1px solid #3b82f6; color:#1e3a8a; padding:1rem; border-radius:0.25rem; position:relative;">
+                {{ session('cunfirm_order') }}
+            </div>
+        @endif
     <form action="{{route('conform_order')}}" method="post" style="margin-top:10px">
         @csrf
         <input type="text" name="receiver_address" id="" placeholder="Enter Your Address" required> <br><br><br>

@@ -82,8 +82,14 @@ class UserController extends Controller
             $order->user_id=Auth::id();
             $order->product_id=$cart_product->product_id;
             $order->save();
-
-            return redirect()->back()->with('cunfirm_order', 'Order Confirmed');
         }
+        
+            $cart=ProductCart::where('user_id',Auth::id())->get();
+            foreach($cart as $cart){
+                $cart_id=ProductCart::findOrFail($cart->id);
+                $cart_id->delete();
+            }
+            return redirect()->back()->with('cunfirm_order', 'Order Confirmed');
+        
     }
 }

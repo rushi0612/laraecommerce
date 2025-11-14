@@ -11,14 +11,14 @@
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <table style="width:100%; boarder-collapse: collapse; font-family: Arial, Helvetica, sans-serif">
                         <thead>
-                            <tr style="background-color: #f2f2f2;">
-                                <th style="color: rgb(60, 60, 60); padding: 12px; text-align:left; border-bottom: 1px solid #dd;">Customer Name</th>
-                                <th style="color: rgb(60, 60, 60); padding: 12px; text-align:left; border-bottom: 1px solid #dd;">Address</th>
-                                <th style="color: rgb(60, 60, 60); padding: 12px; text-align:left; border-bottom: 1px solid #dd;">Phone</th>
-                                <th style="color: rgb(60, 60, 60); padding: 12px; text-align:left; border-bottom: 1px solid #dd;">Product</th>
-                                <th style="color: rgb(60, 60, 60); padding: 12px; text-align:left; border-bottom: 1px solid #dd;">Price</th>
-                                <th style="color: rgb(60, 60, 60); padding: 12px; text-align:left; border-bottom: 1px solid #dd;">Product Image</th>
-                                <th style="color: rgb(60, 60, 60); padding: 12px; text-align:left; border-bottom: 1px solid #dd;">Status</th>
+                            <tr style="background-color: #949494;">
+                                <th style="padding: 12px; text-align:left; border-bottom: 1px solid #dd;">Customer Name</th>
+                                <th style="padding: 12px; text-align:left; border-bottom: 1px solid #dd;">Address</th>
+                                <th style="padding: 12px; text-align:left; border-bottom: 1px solid #dd;">Phone</th>
+                                <th style="padding: 12px; text-align:left; border-bottom: 1px solid #dd;">Product</th>
+                                <th style="padding: 12px; text-align:left; border-bottom: 1px solid #dd;">Price</th>
+                                <th style="padding: 12px; text-align:left; border-bottom: 1px solid #dd;">Product Image</th>
+                                <th style="padding: 12px; text-align:left; border-bottom: 1px solid #dd;">Status</th>
                             </tr>
                         </thead>
                         <tbody>

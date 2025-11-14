@@ -90,6 +90,9 @@ class UserController extends Controller
                 $cart_id->delete();
             }
             return redirect()->back()->with('cunfirm_order', 'Order Confirmed');
-        
+    }
+    public function myOrders(){
+        $orders = Order::where('user_id', Auth::id())->get();
+        return view('viewmyorders', compact('orders'));
     }
 }
